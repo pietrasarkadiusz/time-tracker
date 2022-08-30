@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="handler"
+            type="com.example.timespenttracker.util.MyHandler"/>
+        <variable name="appUsageDetails"
+            type="com.example.timespenttracker.model.AppUsageOnlyLaunches"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:onClick="@{(view) -> handler.onClick(view,appUsageDetails.packageName)}">
+            <ImageView
+                android:id="@+id/iconImage"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="15dp"
+                android:src="@{appUsageDetails.appIcon}"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp">
+                <TextView
+                    android:id="@+id/app_name"
+                    android:text="@{appUsageDetails.appName}"
+                    style="@style/normal_text"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp">
+                    <TextView
+                        android:id="@+id/label1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/secondary_text"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:text="@string/launches"/>
+                    <TextView
+                        android:id="@+id/label2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/secondary_text"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:text="@{appUsageDetails.launchesString}"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/divider_light"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    </LinearLayout>
+</layout>

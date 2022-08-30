@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">TimeSpentTracker</string>
+    <string name="nav_header_title">TimeSpentTracker</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_day">Dzień</string>
+    <string name="menu_week">Tydzień</string>
+    <string name="menu_month">Miesiąc</string>
+
+    <string name="apps_ranking">Ranking aplikacji</string>
+    <string name="usage">Użycie:</string>
+    <string name="launches">Uruchomienia:</string>
+    <string name="mostUsedApp">Najdłużej używana</string>
+    <string name="mostLaunchedApp">Najczęściej uruchomiana</string>
+    <string name="text_usage_per_day">Użycie/dzisiaj:</string>
+    <string name="text_average_usage">Średnie użycie:</string>
+    <string name="text_last_7_days">Ostatnie 7 dni</string>
+    <string name="text_last_3_months">Ostatnie 3 miesiące</string>
+    <string name="text_launches_today">Uruchomienia/dzisiaj:</string>
+    <string name="text_average_launches">Średnia uruchomień:</string>
+    <string name="text_usage_per_week">Użycie/tydzień:</string>
+    <string name="text_last_4_weeks">Ostatnie 4 tygodnie</string>
+    <string name="text_launches_per_week">Uruchomienia/tydzień:</string>
+    <string name="text_usage_per_month">Użycie/miesiąć:</string>
+    <string name="text_launches_per_month">Uruchomienia/miesiąc:</string>
+    <string name="daily_use_for_7days">Dzienne użycie przez 7 dni</string>
+    <string name="hourly_usage">Godzinne użycie(min)</string>
+    <string name="most_used">Według użycia</string>
+    <string name="most_launched">Według uruchomień</string>
+    <string name="text_usage_today">Użycie dzisiaj:</string>
+    <string name="avg_apps_launches">Średnia uruchomień aplikacji:</string>
+    <string name="today_apps_launches">Dzisiajsze uruchomienia aplikacji:</string>
+    <string name="monthly">Miesięczny</string>
+    <string name="weekly">Tygodniowy</string>
+    <string name="daily">Dzienny</string>
+    <string name="app_launches">Uruchomienia aplikacji:</string>
+    <string name="apps_usage">Użycie aplikacji:</string>
+    <string name="text_raports">Raporty</string>
+    <string name="text_timeline">Linia czasu</string>
+    <string name="menu_timeline">Linia czasu</string>
+    <string name="menu_raports">Raporty</string>
+    <string name="menu_settings">Ustawienia</string>
+    <string name="menu_about">O mnie</string>
+    <string name="raports">Raporty</string>
+    <string name="timeline">Linia czasu</string>
+</resources>

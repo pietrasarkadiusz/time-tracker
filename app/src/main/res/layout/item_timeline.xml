@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="handler"
+            type="com.example.timespenttracker.util.MyHandler"/>
+        <variable name="appUsageDetails"
+            type="com.example.timespenttracker.model.AppUsageDetails"/>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:onClick="@{(view) -> handler.onClick(view,appUsageDetails.packageName)}">
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_centerVertical="true"
+            android:text="@{appUsageDetails.dateInHMFormat}"
+            style="@style/normal_text"/>
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@id/start_time"
+            android:src="@{appUsageDetails.appIcon}"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/app_icon"
+            android:layout_centerVertical="true">
+            <TextView
+                android:id="@+id/package_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@{appUsageDetails.appName}"
+                style="@style/normal_text"/>
+            <TextView
+                android:id="@+id/usage_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{appUsageDetails.usageInHMSFormat}"
+                style="@style/secondary_text"/>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.day.DayFragment">
+    <data>
+        <variable name="viewModel"
+            type="com.example.timespenttracker.ui.week.WeekViewModel"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/week_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:paddingVertical="8dp"
+            android:gravity="center_horizontal"
+            android:text="@{viewModel.weekDate}"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_weekUsage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawSelectorOnTop="false"
+            tools:listitem="@layout/item_app_usage"/>
+    </LinearLayout>
+</layout>
